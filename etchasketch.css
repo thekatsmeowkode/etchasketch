@@ -1,17 +1,17 @@
-* {box-sizing: border-box}
+* {
+    box-sizing: border-box}
 
 html {}
 
-body {
-     
+body { 
     min-height: 98vh;
     display:flex;
     justify-content: center;
     align-items:center;
-     }
+    }
 
-.container
-    {color:blue;
+.container{
+    background-color:white;
     height: 700px;
     width: 700px;
     border:20px solid red;
@@ -34,4 +34,10 @@ body {
     display:block;
     flex:1;
     background-color:lightgray
+}
+
+.clearButton {
+    text-align:center;
+    font-size: 16px;
+    
 }
