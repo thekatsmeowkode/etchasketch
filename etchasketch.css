@@ -8,6 +8,7 @@ body {
     display:flex;
     justify-content: center;
     align-items:center;
+    flex-direction:column
     }
 
 .container{
@@ -36,8 +37,38 @@ body {
     background-color:lightgray
 }
 
+.buttonDiv {text-align:center;}
+
 .clearButton {
     text-align:center;
-    font-size: 16px;
-    
+    font-size: 25px;
+    border-radius: 15px;
+    margin: 10px;}
+
+.inputContainer {
+    display:flex;
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items:center;
 }
+#inputNumber {
+    display:inline;
+    margin-left: 125px;
+    width: 100px;
+    height: 50px;
+    font-size: 40px;
+    text-align:center;
+    color:blue;
+}
+
+#submit {
+    border-radius: 15px;
+    margin: 10px;
+    font-size:25px;
+    text-align:center;
+    display:inline;
+   }
+
+p {text-align:center;
+    font-family:Arial, Helvetica, sans-serif;}
