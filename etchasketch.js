@@ -7,24 +7,16 @@ let userSubmit = document.getElementById('submit')
 userSubmit.addEventListener('click', makeGrid)
 buttonPress.addEventListener('click', eraseGrid)
 
-makeGrid()
+let number = 16
+
+makeGrid(number)
 pencil()
 
-function makeGrid() {
-    let number = inputNumber.value
-    if (number == 0 || number > 101 || isNaN(number)) {
-        for (let i = 0; i < 20; i++) {
-            let row = document.createElement('div');
-            row.classList.add('row');
-            container.appendChild(row);
-            for (let j = 0; j < 20; j++) {
-                let column = document.createElement('div')
-                column.classList.add('column')
-                row.appendChild(column)
-            }
-        }
-    }
-    else if(number >= 1 || number <= 100) {
+function makeGrid(number) {
+    removeGrid()
+    number = inputNumber.value 
+
+if(number >= 1 || number <= 100) {
     for (let i = 0; i < number; i++) {
         let row = document.createElement('div');
         row.classList.add('row');
@@ -35,7 +27,20 @@ function makeGrid() {
             row.appendChild(column)
         }
     }
-}}
+}
+else if (number == 0 || number > 101 || isNaN(number)) {
+    for (let i = 0; i < 20; i++) {
+        let row = document.createElement('div');
+        row.classList.add('row');
+        container.appendChild(row);
+        for (let j = 0; j < 20; j++) {
+            let column = document.createElement('div')
+            column.classList.add('column')
+            row.appendChild(column)
+        }
+    }
+}
+}
 
 pencil();
 
@@ -44,10 +49,16 @@ function pencil(){container.addEventListener(
 
 
 function eraseGrid() {
-    let changer = document.querySelectorAll('.column');
-    for (let i=0; i < changer.length; i++)
-    {changer[i].style.backgroundColor = ''}
+    let columns = document.querySelectorAll('.column');
+    for (let i=0; i < columns.length; i++)
+    {columns[i].style.backgroundColor = ''}
 }
 
+function removeGrid() {
+    let row = document.querySelectorAll('.row')
+    for (let i=0; i< row.length ; i++) {
+        row[i].remove()
+    }
+}
 
 
