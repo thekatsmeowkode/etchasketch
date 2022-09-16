@@ -28,18 +28,6 @@ if(number >= 1 || number <= 100) {
         }
     }
 }
-else if (number == 0 || number > 101 || isNaN(number)) {
-    for (let i = 0; i < 20; i++) {
-        let row = document.createElement('div');
-        row.classList.add('row');
-        container.appendChild(row);
-        for (let j = 0; j < 20; j++) {
-            let column = document.createElement('div')
-            column.classList.add('column')
-            row.appendChild(column)
-        }
-    }
-}
 }
 
 pencil();
